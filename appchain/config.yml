@@ -4,7 +4,7 @@ accounts:
     mnemonic: "cinnamon legend sword giant master simple visit action level ancient day rubber pigeon filter garment hockey stay water crawl omit airport venture toilet oppose"
   - name: bob
     coins: ["10000token", "100000000stake", "200000000token1cmtwaw87vyqgrwww9sq6jp6awqsjzda8hvrvxw"]
-    mnemonic: "stamp later develop betray boss ranch abstract puzzle calm right bounce march orchard edge correct canal fault miracle void dutch lottery lucky observe armed"
+    mnemonic: "define envelope federal move soul panel purity language memory illegal little twin borrow menu mule vote alter bright must deal sight muscle weather rug"
 validator:
   name: alice
   staked: "100000000stake"
