@@ -4,13 +4,18 @@ version: '3'
 
 services:
 
-  checkersa:
+  appchain:
+    build: 
+      context: ./appchain
+      args:
+        configyml: ./config.yml
     container_name: appchain
     image: "appchain_i"
     ports:
       - "26657:26657"
       - "1317:1317"
       - "4500:4500"
+      - "9090:9090"
     networks:
       - ibcbanktransfer_net
 
