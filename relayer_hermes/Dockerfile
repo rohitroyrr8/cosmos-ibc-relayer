@@ -3,7 +3,7 @@
 # and install the Hermes Relayer
 
 # Use Rust Docker Image
-FROM rust:1.61.0
+FROM rust:1.67
 
 # Set working dir
 WORKDIR /home/hermes
@@ -11,7 +11,7 @@ WORKDIR /home/hermes
 RUN rustup default nightly && rustup update
 
 # Install Hermes
-RUN cargo install ibc-relayer-cli@1.0.0 --bin hermes --locked
+RUN cargo install ibc-relayer-cli@1.2.0 --bin hermes --locked
 
 # Copy config file
 COPY ./config.toml /root/.hermes/config.toml
@@ -30,7 +30,7 @@ COPY ./run-relayer.sh /home/hermes/
 RUN chmod +x ./run-relayer.sh
 
 # Run entrypoint script
-# ENTRYPOINT ["/bin/bash", "-c", "/home/hermes/run-relayer.sh"]
+#ENTRYPOINT ["/bin/bash", "-c", "/home/hermes/run-relayer.sh"]
 
-# build with
-# docker build -f Dockerfile . -t relayer_hermes
+# Build with:
+# $ docker build -f Dockerfile . -t relayer_hermes
