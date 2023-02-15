@@ -1,5 +1,40 @@
-# Cosmos IBC Relayers setup towards the CosmosHub testnet 
-Hands-on IBC relayers setup (Hermes & Cosmos Go) for relaying packets, e.g. token transfers, between a local Cosmos/Ignite-based appchain to the CosmosHub testnet (Theta, `theta-testnet-001`).
+# Cosmos IBC Relayers local setup
+
+Hands-on [Cosmos](https://cosmos.network) IBC Relayers setup (Hermes & Cosmos Go) for relaying packets, e.g. token transfers, between a local Cosmos/Ignite-based appchain and the CosmosHub Testnet (Theta, `theta-testnet-001`).
+
+## IBC
+
+Relayer algorithms provide the essential off-chain processes that share data between chains running the IBC protocol by scanning the state of each chain, constructing appropriate datagrams, and executing them on the opposite chain as permitted by the protocol.
+
+Relaying is permissionless and trustless (the light client verification provides the trust).
+
+The Inter-Blockchain Communication protocol ([IBC](https://ibcprotocol.org/)) is the basis for interoperability in Cosmos. 
+
+## IBC Relayers
+
+### Cosmos Go Relayer
+
+Site: [IBC Go](https://ibc.cosmos.network/)
+
+Maintainers: [Cosmos community](https://github.com/cosmos)
+
+Github repo: [cosmos/relayer](https://github.com/cosmos/relayer)
+
+Doc: [Cosmos tutorial](https://tutorials.cosmos.network/hands-on-exercise/5-ibc-adv/3-go-relayer.html)
+
+Version used: `v2.2.0`
+
+### Hermes Relayer
+
+Web site: [Hermes](https://hermes.informal.systems/)
+
+Maintainers: [Informal Systems](https://informal.systems)
+
+Open-Source code repository: [informalsystems/ibc-rs](https://github.com/informalsystems/ibc-rs)
+
+Doc: [commands](https://hermes.informal.systems/commands/index.html)
+
+Version used: `hermes-cli@1.2.0`
 
 
 ## Build of Docker images
