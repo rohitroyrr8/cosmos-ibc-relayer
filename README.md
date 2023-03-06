@@ -1,6 +1,6 @@
 # Cosmos IBC Relayers local setup
 
-Hands-on [Cosmos](https://cosmos.network) IBC Relayers setup (Hermes & Cosmos Go) for relaying packets, e.g. token transfers, between a local Cosmos/Ignite-based appchain and the CosmosHub Testnet (Theta, `theta-testnet-001`).
+Hands-on [Cosmos](https://cosmos.network) IBC Relayers setup (Hermes & Cosmos Go) for relaying packets, e.g. token transfers, between a locally deployed Cosmos or a newly created Ignite-based appchain and the CosmosHub Testnet (Theta, `theta-testnet-001`).
 
 ## IBC
 
@@ -100,28 +100,27 @@ You can use the relayer to send an IBC transaction:
 $ docker exec relayer hermes tx ft-transfer --src-chain appchain --dst-chain theta-testnet-001 --src-port transfer --src-channel channel-0 --amount 100 --denom token --timeout-height-offset 1000
 ```
 
-And, check for the balances again. 
-
 ## Transfer some token (Go Relayer)
 
-The chains have pre-created accounts with some token. In a new terminal, check the balance of the accounts:
+The chains have pre-created accounts with some token. 
+
+Check for the balance of accounts:
 
 ```
 $ docker exec relayer rly q bal appchain
 $ docker exec relayer rly q bal theta-testnet-001
 ```
 
-You can check the addresses with:
+Check for the addresses:
 
 ```
 $ docker exec relayer rly chains address appchain
 $ docker exec relayer rly chains address theta-testnet-001
 ```
 
-You can use the relayer to send an IBC transaction:
+Use the relayer to send an IBC transaction:
 
 ```
-$ docker exec relayer rly tx transfer checkers theta-testnet-001 10token cosmos173czeq76k0lh0m6zcz72yu6zj8c6d0tf294w5k channel-000
+$ docker exec relayer rly tx transfer checkers theta-testnet-001 10token cosmos173czeq76k0lh0m6zcz72yu6zj8c6d0tf294w5k channel-0
 ```
 
-And, check the balances again. 
