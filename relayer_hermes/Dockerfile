@@ -11,7 +11,7 @@ WORKDIR /home/hermes
 RUN rustup default nightly && rustup update
 
 # Install Hermes
-RUN cargo install ibc-relayer-cli@1.2.0 --bin hermes --locked
+RUN cargo install ibc-relayer-cli@1.0.0 --bin hermes --locked
 
 # Copy config file
 COPY ./config.toml /root/.hermes/config.toml

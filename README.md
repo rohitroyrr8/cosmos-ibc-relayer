@@ -77,7 +77,9 @@ Using `docker-compose up` the appchain container is instantiated, and the local 
 When the chain is ready, you can start the relayer process. In a new terminal, jump into the relayer container:
 
 ```
-$ docker exec -it relayer bash
+docker exec -it relayer bash
+hermes config validate
+hermes health-check
 ```
 
 And initialize and start the relayer process:
@@ -97,7 +99,16 @@ $ docker exec appchain checkersd query bank balances cosmos14y0kdvznkssdtal2r60a
 You can use the relayer to send an IBC transaction:
 
 ```
-$ docker exec relayer hermes tx ft-transfer --src-chain appchain --dst-chain theta-testnet-001 --src-port transfer --src-channel channel-0 --amount 100 --denom token --timeout-height-offset 1000
+hermes tx ft-transfer --src-chain appchain \
+--dst-chain theta-testnet-001 --src-port transfer \
+--src-channel channel-0 --amount 100 \
+--receiver cosmos1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd \
+--denom token1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd \
+--timeout-height-offset 1000 
+```
+
+```
+hermes tx packet-recv --dst-chain theta-testnet-001 --src-chain appchain --src-port transfer --src-channel channel-0
 ```
 
 ## Transfer some token (Go Relayer)
@@ -124,3 +135,4 @@ Use the relayer to send an IBC transaction:
 $ docker exec relayer rly tx transfer checkers theta-testnet-001 10token cosmos173czeq76k0lh0m6zcz72yu6zj8c6d0tf294w5k channel-0
 ```
 
+for more refer: https://ida.interchain.io/hands-on-exercise/5-ibc-adv/2-hermes-relayer.html

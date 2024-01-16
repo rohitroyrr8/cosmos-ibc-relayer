@@ -1,14 +1,19 @@
 /home/hermes # 
 hermes tx ft-transfer \
     --key-name alice \
-    --receiver cosmos1cmtwaw87vyqgrwww9sq6jp6awqsjzda8hvrvxw \
+    --receiver cosmos1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd \
     --src-chain appchain \
-    --dst-chain theta-testnet-001 
+    --dst-chain theta-testnet-001 \
     --src-port transfer \
     --src-channel channel-0 \
-    --amount 100000 \
-    --denom token1cmtwaw87vyqgrwww9sq6jp6awqsjzda8hvrvxw \
-    --timeout-height-offset 1000                                                                  
+    --amount 676 \
+    --denom token1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd \
+    --timeout-height-offset 1000     
+
+    hermes tx packet-recv --dst-chain theta-testnet-001 --src-chain appchain --src-port transfer --src-channel channel-0
+
+    
+                                                                 
 2023-02-14T20: 38: 17.451620Z  INFO ThreadId(01) using default configuration from '/root/.hermes/config.toml'
 2023-02-14T20: 38: 17.452068Z  INFO ThreadId(01) running Hermes v1.2.0
 SUCCESS [

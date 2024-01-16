@@ -3,8 +3,8 @@
   "value": {
     "key": "alice",
     "chain-id": "theta-testnet-001",
-    "rpc-addr": "https://rpc.sentry-02.theta-testnet.polypore.xyz:443",
-    "grpc-addr": "http://rpc.sentry-02.theta-testnet.polypore.xyz:9090",
+    "rpc-addr": "https://rpc.state-sync-01.theta-testnet.polypore.xyz/",
+    "grpc-addr": "https://grpc.state-sync-01.theta-testnet.polypore.xyz/",
     "account-prefix": "cosmos",
     "keyring-backend": "test",
     "gas-adjustment": 1.5,

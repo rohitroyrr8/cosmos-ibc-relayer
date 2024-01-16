@@ -1,10 +1,10 @@
 accounts:
   - name: alice
-    coins: ["20000token", "200000000stake", "200000000token1"]
-    mnemonic: "cinamon legend ..."
+    coins: ["20000token", "200000000stake", "200000000token1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd"]
+    mnemonic: "cinnamon legend sword giant master simple visit action level ancient day rubber pigeon filter garment hockey stay water crawl omit airport venture toilet oppose"
   - name: bob
-    coins: ["10000token", "100000000stake", "200000000token1"]
-    mnemonic: "define envelope ..."
+    coins: ["10000token", "100000000stake", "200000000token1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd"]
+    mnemonic: "stamp later develop betray boss ranch abstract puzzle calm right bounce march orchard edge correct canal fault miracle void dutch lottery lucky observe armed"
 validator:
   name: alice
   staked: "100000000stake"
@@ -15,6 +15,6 @@ client:
     path: "vue/src/store"
 faucet:
   name: bob
-  coins: ["5token", "100000stake", "100000token1"]
+  coins: ["5token", "100000stake", "100000token1ugx5mkt4yq0735m73scqznv54076qe4d4n4pgd"]
 genesis:
   chain_id: "appchain"
